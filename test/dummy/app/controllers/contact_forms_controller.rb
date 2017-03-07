@@ -8,7 +8,7 @@ class ContactFormsController < ApplicationController
     @contact_form = ContactForm.new(params[:contact_form])
 
     if @contact_form.deliver
-      refirect_to root_url, notice: "Your message was successfully sent."
+      redirect_to root_url, notice: "Your message was successfully sent."
     else
       render action: "new"
     end
